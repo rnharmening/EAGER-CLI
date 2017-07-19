@@ -125,6 +125,7 @@ public class RunEAGER {
         ModulePool preprocesspool = new ModulePool();
         ModulePool gatkpool = new ModulePool();
         preprocesspool.addModule(new CreateResultsDirectories(communicator));
+        preprocesspool.addModule(new EAGERVersions(communicator));
         if (communicator.isReferenceselected()) {
             preprocesspool.addModule(new ReferenceRenamer(communicator));
         }
@@ -284,6 +285,7 @@ public class RunEAGER {
         ModulePool gatkpool = new ModulePool();
 
         preprocesspool.addModule(new CreateResultsDirectories(communicator));
+        preprocesspool.addModule(new EAGERVersions(communicator));
         if (communicator.isReferenceselected()) {
             preprocesspool.addModule(new ReferenceRenamer(communicator));
         }
@@ -446,6 +448,7 @@ public class RunEAGER {
         ModulePool reportpool = new ModulePool();
 
         preprocesspool.addModule(new CreateResultsDirectories(communicator));
+        preprocesspool.addModule(new EAGERVersions(communicator));
         if (communicator.isReferenceselected()) {
             preprocesspool.addModule(new ReferenceRenamer(communicator));
         }
@@ -612,6 +615,7 @@ public class RunEAGER {
         ModulePool reportpool = new ModulePool();
 
         preprocesspool.addModule(new CreateResultsDirectories(communicator));
+        preprocesspool.addModule(new EAGERVersions(communicator));
         if (communicator.isReferenceselected()) {
             preprocesspool.addModule(new ReferenceRenamer(communicator));
         }

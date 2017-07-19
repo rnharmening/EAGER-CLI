@@ -8,7 +8,7 @@ url="http://it.inf.uni-tuebingen.de/?page_id=161"
 license=('custom')
 depends=('java-runtime' 'eager-gui' 'bwa' 'bowtie2' 'samtools' 'picard-tools' 'mapdamage' 'qualimap' 
          'fastqc' 'dedup' 'circularmapper' 'eager-reportengine' 'eagerstat' 'preseq' 'bam2tdf' 
-         'htslib' 'samtools' 'stampy' 'fastx_toolkit' 'clipandmerge' 'vcf2genome' 'pmdtools' 'schmutzi' 'angsd' 'lcp' 'adapterremoval' 'adapterremovalfixprefix')
+         'htslib' 'samtools' 'eagerversions' 'stampy' 'fastx_toolkit' 'clipandmerge' 'vcf2genome' 'pmdtools' 'schmutzi' 'angsd' 'lcp' 'adapterremoval' 'adapterremovalfixprefix')
 source=("$realnamecli" "starterCLI.sh")
 noextract=("$realnamecli")
 
