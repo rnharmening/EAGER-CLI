@@ -45,7 +45,7 @@ public class EAGERVersions extends AModule {
     @Override
     public void setParameters() {
 
-        this.parameters =  new String[]{"eagerVersions"};
+        this.parameters =  new String[]{"eagerVersions", this.communicator.getGUI_resultspath()+"/EAGER.versions"};
         this.outputfile = this.inputfile;
 
     }
