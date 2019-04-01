@@ -78,7 +78,7 @@ public class BWAAlign extends AModule {
                 " " + this.communicator.getMapper_advanced() + " -f " + getOutputfolder() + "/" + output_stem0 + ".sai";
 
         String commandTwo = "bwa aln -t " + this.communicator.getCpucores() +
-                " " + this.communicator.getGUI_reference() + " " + this.inputfile.get(0) + " " +
+                " " + this.communicator.getGUI_reference() + " " + this.inputfile.get(1) + " " +
                 "-n " + this.communicator.getMapper_mismatches() + " -l " + this.communicator.getMapper_seedlength() +
                 " " + this.communicator.getMapper_advanced() + " -f " + getOutputfolder() + "/" + output_stem1 + ".sai";
 
