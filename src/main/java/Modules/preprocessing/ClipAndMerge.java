@@ -87,7 +87,7 @@ public class ClipAndMerge extends AModule {
         return new String[]{"ClipAndMerge", "-in1",  getForwards(), "-in2", getReverse(),
                 "-f", this.communicator.getMerge_fwadaptor(), "-r", this.communicator.getMerge_bwadaptor(),
                 "-l", String.valueOf(this.communicator.getQuality_readlength()),"-no_merging", "-qt", "-q", String.valueOf(this.communicator.getQuality_minreadquality()),
-                "-log", getOutputfolder()+ "stats.log", String.valueOf(this.communicator.getMerge_min_adapter_overlap()),
+                "-log", getOutputfolder()+ "stats.log", "-m", String.valueOf(this.communicator.getMerge_min_adapter_overlap()),
                 this.communicator.getMerge_advanced(),
                 "-o ", getOutputfolder() +output_stem+".clipped.fq.gz", "-u", getOutputfolder()+output_stem+".forwards.fq.gz", getOutputfolder()+output_stem+".reverse.fq.gz"};
 
