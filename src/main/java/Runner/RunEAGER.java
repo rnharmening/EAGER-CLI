@@ -1120,10 +1120,10 @@ public class RunEAGER {
                 if(!communicator.isMerge_only_clipping()){
                     toadd.addModule(new AdapterRemoval(communicator));
                     toadd.addModule(new CombineFastQ(communicator));
+                    toadd.addModule(new AdapterRemovalFixReadPrefix(communicator));
                 } else {
                     toadd.addModule(new AdapterRemoval(communicator, AdapterRemoval.ADAPTER_CLIPPING_ONLY));
                 }
-                toadd.addModule(new AdapterRemovalFixReadPrefix(communicator));
             } else {
                 toadd.addModule(new AdapterRemoval(communicator, AdapterRemoval.SINGLE_ENDED_ONLY));
             }
