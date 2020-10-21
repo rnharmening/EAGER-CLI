@@ -793,7 +793,8 @@ public class RunEAGER {
      * --> depending on this we decide if sampe or samse have to be used.
      */
     private void addBWAMapping(ModulePool pooltoadd) {
-        if (communicator.getMerge_type().equals("PAIRED") && communicator.isRun_clipandmerge() && communicator.isMerge_only_clipping()) {
+        if (communicator.getMerge_type().equals("PAIRED") && ((communicator.isRun_clipandmerge() && communicator.isMerge_only_clipping())
+                || !communicator.isRun_clipandmerge())) {
             pooltoadd.addModule(new BWAAlign(communicator, BWAAlign.PAIREDENDWITHOUTMERGING));
             pooltoadd.addModule(new BWASampe(communicator));
         } else {
@@ -909,7 +910,8 @@ public class RunEAGER {
      */
 
     private void addBWAMemMapping(ModulePool pooltoadd) {
-        if (communicator.isPairmenttype() && !communicator.isRun_clipandmerge()) {
+        if (communicator.getMerge_type().equals("PAIRED") && ((communicator.isRun_clipandmerge() && communicator.isMerge_only_clipping())
+                || !communicator.isRun_clipandmerge())) {
             pooltoadd.addModule(new BWAMem(communicator, BWAMem.PAIREDENDWITHOUTMERGE));
         } else {
             pooltoadd.addModule(new BWAMem(communicator));
